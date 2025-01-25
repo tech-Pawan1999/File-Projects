@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="js.js" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .a {
+        width: 100%;
+        height: 500px;
+        background-image: url(https://images.pexels.com/photos/2271107/pexels-photo-2271107.jpeg?auto=compress&cs=tinysrgb&w=600);
+        background-size: 100% 500px;
+        position: relative;
+      }
+
+      .a0 {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px;
+        color: white;
+      }
+
+      .a1 h1 {
+        margin-right: 40px;
+      }
+
+      a {
+        text-decoration: none;
+        transition: all 2s;
+      }
+
+      a::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: white;
+        display: block;
+        border-radius: 10px;
+        transition: all 1s;
+      }
+
+      a:hover::after {
+        width: 100%;
+      }
+
+      li {
+        list-style-type: none;
+        padding: 10px 20px;
+      }
+
+      .a2 ul {
+        display: flex;
+      }
+
+      .a2 a {
+        color: white;
+        font-weight: bold;
+      }
+
+      .a2 a:hover {
+        color: rgb(255, 242, 0);
+      }
+
+      .a3 i {
+        color: white;
+        padding: 10px;
+      }
+
+      .a3 button {
+        padding: 5px 15px;
+        border-radius: 10px;
+        background-color: rgb(255, 234, 0);
+        border: 1px solid rgba(0, 0, 0, 0.459);
+      }
+
+      .a4 {
+        width: 500px;
+        height: 300px;
+        color: white;
+        position: absolute;
+        left: 150px;
+        top: 200px;
+      }
+      .a4 p {
+        font-weight: 600;
+      }
+
+      .a4 h1 {
+        margin-bottom: 20px;
+      }
+
+      .a4 button {
+        /* color: white; */
+        /* font-weight: 800; */
+        padding: 5px 25px;
+        border-radius: 10px;
+        background-color: rgb(255, 234, 0);
+        border: 1px solid rgba(0, 0, 0, 0.459);
+        margin-top: 20px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .b {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+
+      .b1 {
+        width: 400px;
+        height: 200px;
+        display: flex;
+        background-color: rgb(55, 50, 50);
+        color: white;
+        gap: -20px;
+        margin: 10px 10px;
+      }
+
+      .b2 img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 25px 20px;
+        border: 3px solid rgb(255, 234, 0);
+      }
+
+      .b3 h2 {
+        margin-top: 20px;
+      }
+
+      .b3 h1 {
+        font-size: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .b3 sub {
+        font-size: 20px;
+      }
+
+      .b3 button {
+        padding: 5px 25px;
+        border-radius: 10px;
+        background-color: rgb(255, 234, 0);
+        border: 1px solid rgba(0, 0, 0, 0.459);
+        margin-top: 10px;
+      }
+
+      .b3 i {
+        margin-left: 5px;
+      }
+
+      .c {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .c .c1 {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .c1 ul {
+        display: flex;
+      }
+
+      .c1 a {
+        font-weight: bold;
+        transition: all 2s;
+      }
+
+      .c2 {
+        width: 300px;
+        height: 400px;
+        color: white;
+        position: relative;
+        border-radius: 20px;
+        background-color: rgb(55, 50, 50);
+        text-align: left;
+      }
+
+      .c3 img {
+        width: 300px;
+        height: 200px;
+        border-radius: 20px;
+      }
+
+      .c2 .c4 {
+        width: 300px;
+        height: 200px;
+      }
+      .c4 {
+        margin: 10px;
+      }
+
+      .c4 button {
+        text-align: right;
+        border-radius: 50px;
+        background-color: rgb(255, 234, 0);
+        border: 1px solid rgba(0, 0, 0, 0.459);
+        /* margin-top: -30px;
+            margin-left: 250px; */
+        padding: 10px;
+        color: rgb(218, 216, 216);
+        position: absolute;
+        left: 250px;
+        bottom: 30px;
+      }
+
+      .c4 h2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .c4 h4 {
+        margin-top: 20px;
+      }
+      .c5 {
+        width: 100%;
+        height: 800px;
+        display: grid;
+        grid-template-columns: 10% 10% 20%;
+        grid-template-rows: 350px 350px;
+        justify-content: space-evenly;
+        align-items: center;
+        row-gap: 10%;
+        position: relative;
+        /* text-align: center; */
+      }
+      .d button {
+        padding: 5px 25px;
+        border-radius: 10px;
+        background-color: rgb(255, 234, 0);
+        border: 1px solid rgba(0, 0, 0, 0.459);
+        margin: 5px 10px;
+        position: absolute;
+        left: 45%;
+        top: 160%;
+      }
+      .abcd {
+        color: black;
+        transition: all 2s;
+      }
+      .abcd:hover {
+        padding: 10px 10px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="a">
+      <div class="a0">
+        <div class="a1">
+          <h1>Feane</h1>
+        </div>
+        <div class="a2">
+          <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">MENU</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">BOOK TABLE</a></li>
+          </ul>
+        </div>
+        <div class="a3">
+          <i class="fa-solid fa-bell"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <button>Order Online</button>
+        </div>
+      </div>
+      <div class="a4">
+        <h1>Fast Food Restaurant</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
+          quae veniam reprehenderit fugit inventore. Quae veniam iusto accusamus
+          error sit. Natus nobis harum, veritatis fugit iusto culpa accusantium
+          cumque ducimus.
+        </p>
+        <button onclick="test()">Order Now</button>
+      </div>
+    </div>
+    <div class="b">
+      <div class="b1">
+        <div class="b2">
+          <img src="https://images.pexels.com/photos/3616956/pexels-photo-3616956.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+        </div>
+        <div class="b3">
+          <h2>Tasty Thursday</h2>
+          <h1>20%<sub>cg</sub></h1>
+          <button>Order Now<i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+      <div class="b1">
+        <div class="b2">
+          <img src="https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+        </div>
+        <div class="b3">
+          <h2>Pizza Day</h2>
+          <h1>15%<sub>cg</sub></h1>
+          <button>Order Now<i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="c">
+      <h1>Our Menu</h1>
+      <div class="c1">
+        <ul>
+          <li>
+            <a href=""> <span class="abcd">All</span></a>
+          </li>
+          <li>
+            <a href=""> <span class="abcd">Burger</span></a>
+          </li>
+          <li>
+            <a href=""> <span class="abcd">Pizza</span></a>
+          </li>
+          <li>
+            <a href=""> <span class="abcd">Pasta</span></a>
+          </li>
+          <li>
+            <a href=""> <span class="abcd">Fries</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="c5">
+      <div class="c2">
+        <div class="c3">
+          <img src="https://images.pexels.com/photos/1146759/pexels-photo-1146759.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+        </div>
+        <div class="c4">
+          <h2>Delicious Burger</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            veritatis soluta non sunt dignissimos dolores perferendis cumque
+            harum, deleniti quasi.
+          </p>
+          <h4>$20</h4>
+          <button><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+      <div class="c2">
+        <div class="c3">
+          <img src="https://images.pexels.com/photos/2498440/pexels-photo-2498440.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+        </div>
+        <div class="c4">
+          <h2>Delicious Fries</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            veritatis soluta non sunt dignissimos dolores perferendis cumque
+            harum, deleniti quasi.
+          </p>
+          <h4>$20</h4>
+          <button><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+      <div class="c2">
+        <div class="c3">
+          <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+        </div>
+        <div class="c4">
+          <h2>Delicious Pasta</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            veritatis soluta non sunt dignissimos dolores perferendis cumque
+            harum, deleniti quasi.
+          </p>
+          <h4>$20</h4>
+          <button><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+      <div class="c2">
+        <div class="c3">
+          <img src="https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+        </div>
+        <div class="c4">
+          <h2>Tasty Burger</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            veritatis soluta non sunt dignissimos dolores perferendis cumque
+            harum, deleniti quasi.
+          </p>
+          <h4>$20</h4>
+          <button><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+      <div class="c2">
+        <div class="c3">
+          <img src="https://images.pexels.com/photos/367915/pexels-photo-367915.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+        </div>
+        <div class="c4">
+          <h2>Delicious Pizza</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            veritatis soluta non sunt dignissimos dolores perferendis cumque
+            harum, deleniti quasi.
+          </p>
+          <h4>$20</h4>
+          <button><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+      <div class="c2">
+        <div class="c3">
+          <img src="https://images.pexels.com/photos/803963/pexels-photo-803963.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+        </div>
+        <div class="c4">
+          <h2>Delicious Pasta</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            veritatis soluta non sunt dignissimos dolores perferendis cumque
+            harum, deleniti quasi.
+          </p>
+          <h4>$20</h4>
+          <button><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+      <div class="c2">
+        <div class="c3">
+          <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+        </div>
+        <div class="c4">
+          <h2>Tasty Burger</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            veritatis soluta non sunt dignissimos dolores perferendis cumque
+            harum, deleniti quasi.
+          </p>
+          <h4>$20</h4>
+          <button><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+      <div class="c2">
+        <div class="c3">
+          <img src="https://images.pexels.com/photos/3762075/pexels-photo-3762075.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+        </div>
+        <div class="c4">
+          <h2>Delicious Pizza</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            veritatis soluta non sunt dignissimos dolores perferendis cumque
+            harum, deleniti quasi.
+          </p>
+          <h4>$20</h4>
+          <button><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+      <div class="c2">
+        <div class="c3">
+          <img src="https://images.pexels.com/photos/14737/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600" alt="" />
+        </div>
+        <div class="c4">
+          <h2>Delicious Pasta</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            veritatis soluta non sunt dignissimos dolores perferendis cumque
+            harum, deleniti quasi.
+          </p>
+          <h4>$20</h4>
+          <button><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+      <div class="d">
+        <button>Order Now</button>
+      </div>
+    </div>
+
+    <script>
+      let a = prompt("ennter your name");
+      console.log(a);
+    </script>
+  </body>
+</html>
